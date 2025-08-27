@@ -46,22 +46,6 @@ export function HeroSection() {
               From script to publish — completely automated.
             </p>
             
-            {/* Creator Stats */}
-            <div className="flex flex-wrap justify-center gap-8 mb-10 text-sm">
-              <div className="flex items-center gap-2 glass px-4 py-2 rounded-full">
-                <Users className="h-4 w-4 text-primary" />
-                <span>10,000+ Creators</span>
-              </div>
-              <div className="flex items-center gap-2 glass px-4 py-2 rounded-full">
-                <Play className="h-4 w-4 text-secondary" />
-                <span>1M+ Videos Created</span>
-              </div>
-              <div className="flex items-center gap-2 glass px-4 py-2 rounded-full">
-                <TrendingUp className="h-4 w-4 text-primary" />
-                <span>500% Growth Rate</span>
-              </div>
-            </div>
-            
             {/* CTA Button */}
             <Button 
               variant="hero" 
