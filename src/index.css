@@ -8,35 +8,50 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Dark futuristic theme */
+    --background: 240 10% 3.9%;
+    --background-secondary: 240 8% 8%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 210 40% 98%;
+    --card-glass: 240 10% 8%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 217 91% 60%;
+    --primary-glow: 217 91% 70%;
+    --primary-foreground: 240 10% 3.9%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 262 83% 58%;
+    --secondary-glow: 262 83% 68%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 240 8% 15%;
+    --muted-foreground: 240 5% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 217 91% 60%;
+    --accent-foreground: 240 10% 3.9%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 240 8% 15%;
+    --input: 240 8% 15%;
+    --ring: 217 91% 60%;
 
-    --radius: 0.5rem;
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(240 10% 3.9%) 0%, hsl(240 15% 8%) 50%, hsl(240 10% 1%) 100%);
+    --gradient-card: linear-gradient(135deg, hsla(240, 10%, 12%, 0.8) 0%, hsla(240, 8%, 8%, 0.6) 100%);
+    --gradient-glow: linear-gradient(90deg, hsl(217 91% 60%) 0%, hsl(262 83% 58%) 100%);
+    
+    /* Shadows */
+    --shadow-glow: 0 0 30px hsla(217, 91%, 60%, 0.3);
+    --shadow-card: 0 20px 40px hsla(240, 10%, 1%, 0.3);
+    --shadow-intense: 0 0 50px hsla(217, 91%, 60%, 0.5);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +115,66 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+    background: var(--gradient-hero);
+    background-attachment: fixed;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply backdrop-blur-md bg-gradient-to-br from-white/10 to-white/5 border border-white/20;
+    box-shadow: var(--shadow-card);
+  }
+  
+  .glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .glow-intense {
+    box-shadow: var(--shadow-intense);
+  }
+  
+  .gradient-text {
+    background: var(--gradient-glow);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  .futuristic-grid {
+    background-image: 
+      radial-gradient(circle at 25% 25%, hsla(217, 91%, 60%, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, hsla(262, 83%, 58%, 0.15) 0%, transparent 50%),
+      linear-gradient(90deg, transparent 49%, hsla(217, 91%, 60%, 0.03) 50%, transparent 51%),
+      linear-gradient(0deg, transparent 49%, hsla(217, 91%, 60%, 0.03) 50%, transparent 51%);
+    background-size: 100px 100px, 100px 100px, 50px 50px, 50px 50px;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes glow {
+  from {
+    filter: drop-shadow(0 0 20px hsla(217, 91%, 60%, 0.3));
+  }
+  to {
+    filter: drop-shadow(0 0 30px hsla(217, 91%, 60%, 0.6));
   }
 }
