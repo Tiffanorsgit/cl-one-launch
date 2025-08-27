@@ -1,21 +1,21 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { FileText, User, Scissors } from "lucide-react";
+import { FileText, User, Scissors, Youtube, Instagram, TrendingUp } from "lucide-react";
 
 const features = [
   {
     icon: FileText,
-    title: "Script Writing",
-    description: "Engaging scripts generated in your brand's tone."
+    title: "AI Script Writing",
+    description: "Generate viral-worthy scripts tailored to your niche and audience. Perfect for YouTube, TikTok, and Instagram content."
   },
   {
     icon: User,
-    title: "Realistic Avatar Presenter",
-    description: "Custom digital presenter that looks and talks like you."
+    title: "Your Digital Twin",
+    description: "Create a realistic AI avatar that looks and sounds exactly like you. Scale your content without being on camera 24/7."
   },
   {
     icon: Scissors,
-    title: "Auto Editing",
-    description: "Jump cuts, captions, thumbnails, and social-ready exports."
+    title: "Auto Editing Magic",
+    description: "Professional editing with jump cuts, captions, thumbnails, and platform-optimized exports. Ready to publish in minutes."
   }
 ];
 

@@ -2,28 +2,28 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 const faqs = [
   {
-    question: "When will CL 1 launch?",
-    answer: "We're opening early access soon — join the waitlist to be among the first to experience CL 1."
+    question: "When will CL 1 launch for content creators?",
+    answer: "We're opening early access soon — join the waitlist to be among the first creators to experience CL 1 and get special beta access."
   },
   {
-    question: "Is the avatar customizable?",
-    answer: "Yes, you can train CL 1 to look and sound like you, creating a personalized digital presenter that matches your brand."
+    question: "Can I train the AI avatar to match my personal brand?",
+    answer: "Absolutely! You can train CL 1 to look and sound exactly like you, maintaining your unique personality and brand voice across all content."
   },
   {
-    question: "Which platforms are supported?",
-    answer: "YouTube, Instagram, TikTok, LinkedIn, Twitter, and more. CL 1 optimizes content for each platform automatically."
+    question: "Which content platforms does CL 1 support?",
+    answer: "YouTube, Instagram Reels, TikTok, LinkedIn, Twitter, and more. CL 1 automatically optimizes content format, length, and style for each platform."
   },
   {
-    question: "What's the pricing?",
-    answer: "We'll announce plans closer to launch. Early users get special access and preferential pricing."
+    question: "How much will CL 1 cost for creators?",
+    answer: "We'll announce creator-friendly pricing closer to launch. Early adopters get special access and preferential rates. No corporate pricing for individual creators."
   },
   {
-    question: "How realistic are the AI avatars?",
-    answer: "Our avatars use cutting-edge AI to create lifelike digital presenters with natural speech, gestures, and expressions."
+    question: "Can CL 1 maintain my content style and voice?",
+    answer: "Yes! CL 1 learns your unique style, tone, and preferences to ensure every video feels authentically you, just automated."
   },
   {
-    question: "Can I edit the generated videos?",
-    answer: "Absolutely! While CL 1 creates professional videos automatically, you have full control to make adjustments and customizations."
+    question: "Will I still have creative control over my content?",
+    answer: "100%. CL 1 handles the heavy lifting while you maintain full creative control. Edit, adjust, and customize everything to match your vision."
   }
 ];
 
