@@ -6,6 +6,8 @@ import { FAQSection } from "@/components/FAQSection";
 import { FinalCTASection } from "@/components/FinalCTASection";
 
 const Index = () => {
+  console.log("Index component rendering");
+  
   return (
     <div className="min-h-screen">
       <HeroSection />
